@@ -1,0 +1,12 @@
+    $(function(){
+        $("#includedContentHeader").load("includes/header.html"); 
+    });
+    $(function(){
+        $("#includedContentFooter").load("includes/footer.html"); 
+    });
+    $(function(){
+        $("#includedContentSpelregels").load("includes/spelregels.html"); 
+    });
+    $(function(){
+        $("#includedContentUitrusting").load("includes/uitrusting.html"); 
+    });
