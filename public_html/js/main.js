@@ -10,3 +10,15 @@
     $(function(){
         $("#includedContentUitrusting").load("includes/uitrusting.html"); 
     });
+    $(function(){
+        $("#includedContentMenu").load("includes/menu.html"); 
+    });
+
+$(document).ready(function(){
+    $("p").click(function(){
+        $(this).hide();
+    });
+    $("p").click(function(){
+        $("#mmt").val('TEST');
+    });
+});
