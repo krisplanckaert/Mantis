@@ -5,20 +5,42 @@
         $("#includedContentFooter").load("includes/footer.html"); 
     });
     $(function(){
-        $("#includedContentSpelregels").load("includes/spelregels.html"); 
-    });
-    $(function(){
-        $("#includedContentUitrusting").load("includes/uitrusting.html"); 
-    });
-    $(function(){
         $("#includedContentMenu").load("includes/menu.html"); 
     });
-
-$(document).ready(function(){
-    $("p").click(function(){
-        $(this).hide();
+    $(function(){
+        $("#mm").load("includes/mm.html"); 
     });
-    $("p").click(function(){
-        $("#mmt").val('TEST');
+    
+$(document).ready(function(){
+    filename = "home.html";
+    $("#includedContent").load(filename); 
+    
+    $(document).on('click', 'p', function(){
+        id=$(this).attr('id'); 
+        filename = id+".html";
+        $("#mmt").text(id);
+        $("#includedContent").load(filename); 
+        $("#includedContentSubMenu").load('includes/empty.html'); 
+        if($(this).hasClass('uitrusting')) {
+            $("#includedContentSubMenu").load('includes/uitrusting.html'); 
+        }
+        if($(this).hasClass('spelregels')) {
+            $("#includedContentSubMenu").load('includes/spelregels.html'); 
+        }
+        $("#mm").addClass('off');
+        $("#mm").removeClass('on');
+        $('#mmb').css("background-image", "url(css/img/63525898bc.png)");  
+    });
+    
+    $(document).on('click', '#mmb', function(){
+        if($("#mm").hasClass('off')) {
+            $("#mm").addClass('on');
+            $("#mm").removeClass('off');
+            $('#mmb').css("background-image", "url(css/img/e4727122fb.png)");  
+        } else {
+            $("#mm").addClass('off');
+            $("#mm").removeClass('on');
+            $('#mmb').css("background-image", "url(css/img/63525898bc.png)");  
+        }
     });
 });

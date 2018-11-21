@@ -1,5 +1,9 @@
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
 
+#header {
+    display:none;
+}
+
 #mmb {
     position: absolute;
     width: 63px;
@@ -129,7 +133,7 @@ nav ul {
     list-style-type: none;
 }
 
-nav a {
+nav p {
     display: block;
     margin-bottom: 10px;
     padding: 15px 0;
@@ -142,12 +146,12 @@ nav a {
     background: #e44d26;
 }
 
-nav a:hover,
-nav a:visited {
+nav p:hover,
+nav p:visited {
     color: white;
 }
 
-nav a:hover {
+nav p:hover {
     text-decoration: underline;
 }
 
@@ -209,11 +213,16 @@ nav a:hover {
     INTERMEDIATE: Menu
    ==================== */
 
+#header {
+    display: block;
+}
+
+
 .mm {
     display: none;
 }
 
-    nav a {
+    nav p {
         float: left;
         width: 9%;
         margin: 0 1.7%;
@@ -237,7 +246,7 @@ nav a:hover {
         display: inline;
     }
 
-    .oldie nav a {
+    .oldie nav p {
         margin: 0 0.7%;
     }
 }
@@ -418,4 +427,49 @@ nav a:hover {
         box-shadow: 0 1px 3px rgba(0,0,0,.3);
         min-height: 49px;
     }
+}
+
+#mm.on {
+    display: block;
+    top: -10px;
+    left: 0;
+    right: 63px;
+    animation: mmon .35s;
+    -moz-animation: mmon .35s;
+    -webkit-animation: mmon .35s;
+    -o-animation: mmon .35s;
+}
+
+#mm.off {
+    animation: mmoff .35s;
+    -moz-animation: mmoff .35s;
+    -webkit-animation: mmoff .35s;
+    -o-animation: mmoff .35s;
+}
+#mm {
+    position: absolute;
+    background-color: #fff;
+    border-right: 1px solid #999;
+    box-shadow: 2px 0 9px rgba(0,0,0,.5);
+    min-height: 52px;
+    padding-top: 10px;
+    z-index: 11;
+    top: -10010px;
+    left: -100%;
+    right: 120%;
+}
+
+#mm p {
+    padding: 16px 56px 15px 20px;
+    border-bottom: 1px solid #dedede;
+    color: #4d4d4d;
+    text-decoration: none;
+    font-family: helvetica,arial,sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    background-color: #fff;
+    word-wrap: break-word;
+}
+#mm p, #mm li {
+    display: block;
 }
