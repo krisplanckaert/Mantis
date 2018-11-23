@@ -43,4 +43,12 @@ $(document).ready(function(){
             $('#mmb').css("background-image", "url(css/img/63525898bc.png)");  
         }
     });
+    
+    $(document).on('click', '#divSpelregels', function() {
+        $("#ulSpelregels").toggle();
+    });
+    
+    $(document).on('click', '#divUitrusting', function() {
+        $("#ulUitrusting").toggle();
+    });
 });

@@ -497,6 +497,17 @@ ol, ul {
     cursor: pointer;
 }
 
+#ulSpelregels, #ulUitrusting {
+    display:none;
+}
+
+#mm li li p {
+    padding-left: 40px;
+    background-repeat: no-repeat;
+    background-position: 20px 16px;
+    background-image: url(img/b1b16c7821.png);
+}
+
 @keyframes mmon{0%{left:-100%;right:120%;top:-10010px}1%{top:-10px}to{left:0;right:63px}}
 @-moz-keyframes mmon{0%{left:-90%;right:120%;top:-10010px}1%{top:-10px}to{left:0;right:63px}}
 @-webkit-keyframes mmon{0%{left:-90%;right:120%;top:-10010px}1%{top:-10px}to{left:0;right:63px}}
